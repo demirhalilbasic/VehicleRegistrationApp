@@ -4,13 +4,13 @@
 Welcome to the repository for the Vehicle Registration and Management App! 🚗📋 This project provides a comprehensive solution for managing vehicle registrations, client information, and insurance details. Designed as a full-stack application, it covers both frontend and backend functionalities, offering a seamless experience for users and administrators alike.
 
 Technologies used:
-- PHP: For server-side scripting and backend logic
-- HTML5: For creating the structure of web pages
-- CSS: For styling and layout of the application
-- JavaScript: For enhancing user interactions and client-side functionalities
-- MySQL: For managing and storing data in a relational database
-- XAMPP: As the development environment to run Apache and MySQL locally
-- Visual Studio Code: As the primary code editor used for development
+- **PHP**: For server-side scripting and backend logic
+- **HTML5**: For creating the structure of web pages
+- **CSS**: For styling and layout of the application
+- **JavaScript**: For enhancing user interactions and client-side functionalities
+- **MySQL**: For managing and storing data in a relational database
+- **XAMPP**: As the development environment to run Apache and MySQL locally
+- **Visual Studio Code**: As the primary code editor used for development
 
 ![Vehicle relation](images/crud_vehicle.png)
 
