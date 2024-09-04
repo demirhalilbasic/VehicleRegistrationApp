@@ -1,0 +1,65 @@
+CREATE TABLE `Klijent` (
+  `id_klijenta` INT AUTO_INCREMENT,
+  `ime` VARCHAR(50),
+  `prezime` VARCHAR(50),
+  `adresa` VARCHAR(255),
+  `email` VARCHAR(100),
+  `telefon` VARCHAR(20),
+  PRIMARY KEY (`id_klijenta`),
+  INDEX `ime_prezime` (`ime`(50), `prezime`(50)),
+  INDEX `email` (`email`(100))
+);
+
+CREATE TABLE `Registracija` (
+  `broj_registracije` INT AUTO_INCREMENT,
+  `id_vozila` INT,
+  `tablice` VARCHAR(20),
+  `datum_registracije` DATE,
+  `datum_isteka_registracije` DATE,
+  `broj_polise` INT,
+  PRIMARY KEY (`broj_registracije`),
+  INDEX `tablice_datum` (`tablice`, `datum_registracije`, `datum_isteka_registracije`),
+  FOREIGN KEY (`id_vozila`) REFERENCES `Vozilo`(`id_vozila`),
+  FOREIGN KEY (`broj_polise`) REFERENCES `Osiguranje`(`broj_polise`)
+);
+
+CREATE TABLE `Placanje` (
+  `id_placanja` INT AUTO_INCREMENT,
+  `broj_registracije` INT,
+  `iznos` DECIMAL(10, 2),
+  `datum` DATE,
+  `nacin_placanja` VARCHAR(50),
+  PRIMARY KEY (`id_placanja`),
+  INDEX `iznos_datum` (`iznos`, `datum`, `nacin_placanja`),
+  FOREIGN KEY (`broj_registracije`) REFERENCES `Registracija`(`broj_registracije`)
+);
+
+CREATE TABLE `Vozilo` (
+  `id_vozila` INT AUTO_INCREMENT,
+  `id_klijenta` INT,
+  `brend` VARCHAR(50),
+  `model` VARCHAR(50),
+  `VIN` VARCHAR(50),
+  `boja` VARCHAR(20),
+  `tip_karoserije` VARCHAR(20),
+  `godina_proizvodnje` YEAR,
+  `zapremina_motora` DECIMAL(5, 1),
+  `snaga_motora` DECIMAL(5, 2),
+  `vrsta_motora` VARCHAR(20),
+  `broj_sjedista` INT,
+  `nosivost` DECIMAL(10, 2),
+  PRIMARY KEY (`id_vozila`),
+  INDEX `brend_model` (`brend`(50), `model`(50), `VIN`(50), `boja`(20), `tip_karoserije`(20), `godina_proizvodnje`, `zapremina_motora`, `snaga_motora`, `vrsta_motora`(20), `broj_sjedista`, `nosivost`),
+  FOREIGN KEY (`id_klijenta`) REFERENCES `Klijent`(`id_klijenta`)
+);
+
+CREATE TABLE `Osiguranje` (
+  `broj_polise` INT AUTO_INCREMENT,
+  `vrsta_osiguranja` VARCHAR(50),
+  `datum_osiguranja` DATE,
+  `period_osiguranja` TINYINT,
+  `premija` DECIMAL(10, 2),
+  `osiguravajuca_kuca` VARCHAR(50),
+  PRIMARY KEY (`broj_polise`),
+  INDEX `vrsta_datum` (`vrsta_osiguranja`(50), `datum_osiguranja`, `period_osiguranja`, `premija`, `osiguravajuca_kuca`(50))
+);

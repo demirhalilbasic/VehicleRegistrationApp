@@ -1,0 +1,69 @@
+INSERT INTO Klijent (ime, prezime, adresa, email, telefon) VALUES
+('Marko', 'Marković', 'Ulica 123', 'marko@example.com', '1234567890'),
+('Ana', 'Anić', 'Trg 456', 'ana@example.com', '0987654321'),
+('Amar', 'Amarović', 'Prolaz 789', 'amar@example.com', '1122334455'),
+('Petra', 'Petrić', 'Aleja 1011', 'petra@example.com', '5544332211'),
+('Rejan', 'Rejanović', 'Ulica 1213', 'rejan@example.com', '7788990011'),
+('Ema', 'Emić', 'Trg 1415', 'ema@example.com', '9988776655'),
+('Ajdin', 'Ajdinović', 'Prolaz 1617', 'ajdin@example.com', '3322119988'),
+('Nora', 'Norić', 'Aleja 1819', 'nora@example.com', '8899776655'),
+('Sara', 'Sarić', 'Ulica 2021', 'sara@example.com', '1122334455'),
+('Edin', 'Edinović', 'Trg 2223', 'edin@example.com', '6677889900'),
+('Sanel', 'Sanelović', 'Ulica 2324', 'sanel@example.com', '3344556677'),
+('Mara', 'Marić', 'Trg 2526', 'mara@example.com', '7788990011'),
+('Davor', 'Davorić', 'Prolaz 2728', 'davor@example.com', '1100223344'),
+('Sanja', 'Sanić', 'Aleja 2930', 'sanja@example.com', '2233445566'),
+('Darko', 'Darković', 'Ulica 3132', 'darko@example.com', '6677889900'),
+('Faris', 'Farisović', 'Trg 3334', 'faris@example.com', '0011223344'),
+('Stjepan', 'Stjepanić', 'Prolaz 3536', 'stjepan@example.com', '4455667788'),
+('Azra', 'Azrović', 'Aleja 3738', 'azra@example.com', '7788990011'),
+('Nikola', 'Nikolić', 'Ulica 3940', 'nikola@example.com', '8899001122'),
+('Lara', 'Larović', 'Trg 4142', 'lara@example.com', '2233445566');
+
+INSERT INTO Registracija (id_vozila, tablice, datum_registracije, datum_isteka_registracije, broj_polise) VALUES
+(1, 'B12-Z-456', '2020-02-15', '2021-02-16', 1),
+(2, 'R34-S-678', '2019-08-20', '2020-08-28', 2),
+(3, 'Z56-A-890', '2021-05-10', '2022-05-8', 3),
+(4, 'A12-B-456', '2023-11-25', '2024-12-02', 4),
+(5, 'M34-T-678', '2019-04-30', '2020-04-28', 5),
+(6, 'W56-H-890', '2023-10-15', '2024-10-15', 6),
+(7, 'D12-L-456', '2023-07-05', '2024-07-05', 7),
+(8, 'O34-R-678', '2022-01-20', '2023-01-21', 8),
+(9, 'L56-T-890', '2023-12-10', '2024-12-18', 9),
+(10, 'A12-M-456', '2023-03-08', '2024-03-09', 10);
+
+INSERT INTO Placanje (broj_registracije, iznos, datum, nacin_placanja) VALUES
+(1, 600.00, '2020-02-15', 'Gotovina'),
+(2, 550.00, '2019-08-20', 'Kartica'),
+(3, 800.00, '2021-05-10', 'Gotovina'),
+(4, 700.00, '2018-11-25', 'Kartica'),
+(5, 1800.00, '2019-04-30', 'Kartica'),
+(6, 720.00, '2020-10-15', 'Gotovina'),
+(7, 620.00, '2018-07-05', 'Gotovina'),
+(8, 1200.00, '2022-01-20', 'Kartica'),
+(9, 1350.00, '2019-12-10', 'Kartica'),
+(10, 1300.00, '2023-03-08', 'Kartica');
+
+INSERT INTO Vozilo (id_klijenta, brend, model, VIN, boja, tip_karoserije, godina_proizvodnje, zapremina_motora, snaga_motora, vrsta_motora, broj_sjedista, nosivost) VALUES
+(1, 'Volkswagen', 'Golf', 'J3K5H7D8L2S1P4F6G', 'Crna', 'Hečbek', 2018, 1.6, 77.00, 'Dizel', 5, 450.00),
+(2, 'Peugeot', '308', 'R9A2T6Y8Z1U4O', 'Plava', 'Hečbek', 2011, 1.6, 68.00, 'Dizel', 5, 400.00),
+(3, 'Audi', 'A6', 'L7Q2W5B8R3I6K9M', 'Siva', 'Limuzina', 2013, 3.0, 150.00, 'Dizel', 5, 550.00),
+(4, 'Volkswagen', 'Passat CC', 'F1N4H6S9E2C5T7P', 'Crna', 'Limuzina', 2010, 2.0, 103.00, 'Dizel', 5, 500.00),
+(5, 'Porsche', 'Carrera 911', 'Z8V3Y6B9J2G4', 'Bijela', 'Kupe', 2013, 3.8, 294.00, 'Benzin', 4, 350.00),
+(6, 'Volkswagen', 'Arteon', 'D5R8Q1O4M7W2P9L', 'Crna', 'Limuzina', 2023, 2.0, 235.00, 'Benzin', 5, 480.00),
+(7, 'Seat', 'Leon', 'U2T5N8A3I6E9S', 'Plava', 'Hečbek', 2006, 1.6, 75.00, 'LPG', 5, 420.00),
+(8, 'Land Rover', 'Range Rover Sport', 'O4V7C2G5S8D3J6', 'Siva', 'SUV', 2014, 3.0, 183.00, 'Dizel', 5, 650.00),
+(9, 'Tesla', 'Model 3', 'H9U2F5K8W1M4L7', 'Bijela', 'Limuzina', 2022, 0.0, 366.00, 'Električni', 5, 380.00),
+(10, 'Ford', 'Ranger', 'E3B6Y9I2QN8A', 'Narandžasta', 'Pickup', 2018, 3.2, 147.00, 'Dizel', 5, 700.00);
+
+INSERT INTO Osiguranje (vrsta_osiguranja, datum_osiguranja, period_osiguranja, premija, osiguravajuca_kuca) VALUES
+('Osnovno', '2020-02-18', 2, 500.00, 'SigurPolis'),
+('Punokasko', '2019-08-20', 4, 900.00, 'VoznoŠtita'),
+('Osnovno', '2021-05-12', 1, 700.00, 'SafeRide Osiguranje'),
+('Punokasko', '2023-11-28', 3, 1800.00, 'AutoGuardia'),
+('Osnovno', '2019-04-30', 2, 900.00, 'ShieldDrive'),
+('Punokasko', '2023-10-17', 5, 1900.00, 'DriveSure Osiguranje'),
+('Osnovno', '2023-07-05', 1, 550.00, 'SafeRide Osiguranje'),
+('Punokasko', '2022-01-18', 3, 3500.00, 'VoznoŠtita'),
+('Osnovno', '2023-12-4', 1, 700.00, 'ShieldDrive'),
+('Punokasko', '2023-03-06', 4, 2400.00, 'AutoGuardia');
