@@ -34,4 +34,4 @@ This application is built to facilitate the management of vehicle registrations 
 
 ## 👍 Feedback
 
-I'm always open to hearing your thoughts! If you have any suggestions, run into any issues, or just want to share some feedback, feel free to get in touch. Your input is greatly appreciated and helps make the project better!
+I'm always open to hearing your thoughts! If you have any suggestions, run into any issues or just want to share some feedback, feel free to get in touch. Your input is greatly appreciated and helps make the project better!
